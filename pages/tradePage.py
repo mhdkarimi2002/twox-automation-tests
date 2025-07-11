@@ -2,6 +2,7 @@ import re
 from playwright.sync_api import Page
 
 class TradePage:
+    
     def __init__(self, page: Page):
         self.page = page
         self.firstField = page.locator("div", has_text=re.compile(r"تبدیل ازموجودی")).get_by_role("textbox").nth(0)
